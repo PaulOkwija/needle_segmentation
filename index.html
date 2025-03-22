@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Needle Segmentation For Real-time Guidance</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+   <!-- ––––––––––––––––––––––––––         Global site tag (gtag.js) - Google Analytics         –––––––––––––––––––––––––– -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -22,18 +22,24 @@
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
+<!-- ––––––––––––––––––––––––––––––––––––––––––––––––––         fonts         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
 
+
+<!-- ––––––––––––––––––––––––––––––––––––––––––––––––––         CSS         –––––––––––––––––––––––––––––––––––––––––––––––––– -->      
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/style.css">
+
+
+<!-- ––––––––––––––––––––––––––––––––––––––––––––––––––         favicon         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" href="./static/images/favicon.svg">
 
+<!-- ––––––––––––––––––––––––––––––––––––––––––––––––––         JS         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
@@ -41,28 +47,28 @@
   <script src="./static/js/index.js"></script>
 </head>
 
-<!-- Body of html file -->
+<!-- ––––––––––––––––––––––––––––––––––––––––––––––––––         Body         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <body>
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Needle Segmentation For Real-time Guidance of Minimally Invasive Procedures Using Handheld 2D Ultrasound Systems</h1>
-          <h1 style="font-size:2em; " class="title is-1 publication">TechRxiv</h1>
+          <h1 class="title is-2 publication-title">Needle Segmentation For Real-time Guidance of Minimally Invasive Procedures Using Handheld 2D Ultrasound Systems</h1>
+          <!-- <h1 style="font-size:2em; " class="title is-1 publication">TechRxiv</h1> -->
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               Paul Okwija Mugume<sup>1</sup>,</span>
             <span class="author-block">
               Joanitta Nabacwa<sup>1</sup>,</span>
             <span class="author-block">
-              Sylvia Imanirakiza<sup>2</sup>,
+              Sylvia Imanirakiza<sup>1</sup>,
             </span>
             <span class="author-block">
-              Alvin Bagetuuma Kimbowa<sup>2</sup>,
+              Alvin Bagetuuma Kimbowa<sup>1</sup>,
             </span>
             <span class="author-block">
-              Cosmas Mwikirize<sup>2</sup>,
+              Cosmas Mwikirize<sup>1</sup>,
             </span>
             <span class="author-block">
               Ilker Hacihaliloglu<sup>2</sup>,
@@ -111,7 +117,8 @@
   </div>
 </section>
 
-<!-- ------------------Video Section here------------------ -->
+
+ <!-- ––––––––––––––––––––––––––––––––––––––––––––––––––         Videos         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <!-- <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
@@ -248,37 +255,40 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-2">Abstract</h2>
         <div class="content has-text-justified">
-          <p>We propose a novel machine learning based method for <b>real-time needle segmentation</b> in handheld 2D ultrasound systems.
-          </p>
-
+          <!-- <p>We propose a novel machine learning based method for <b>real-time needle segmentation</b> in handheld 2D ultrasound systems.
+          </p> -->
+          <h2 class="title is-3">Background</h2>
           <p>
             Accurate needle placement is crucial during minimally invasive procedures such as biopsies, regional anaesthesia and fluid aspiration. 
             2D Ultrasound is widely used for needle guidance during such procedures, however, it has a limited field-of-view and poor needle visibility for steep insertion angles.
-            In this work, we propose a novel machine learning (ML)-based method for real-time needle segmentation in handheld 2D ultrasound systems. 
+            
+        </p>
+        
+
+        <h2 class="title is-3">Method</h2>
+        <p>In this work, we propose a novel machine learning (ML)-based method for real-time needle segmentation in handheld 2D ultrasound systems. 
             The proposed method involves a fast and simple annotation technique allowing for the labelling of large datasets. It then utilizes the U-Net architecture which is
             modified to allow for easy integration into a handheld ultrasound system. Two datasets were used in this work, one consisting
             of B-mode ultrasound videos obtained from human tissue and the other consisting of videos and frames from chicken, porcine
-            and bovine tissue. The model is trained on 1262 frames and evaluated on 209 frames. This approach achieves an Intersection
-            Over Union (IoU) of 0.75 and a dice coefficient of 0.851 on frames obtained from human tissue. The model is integrated
-            into the processing pipeline of a portable ultrasound system and achieves an overall processing speed of about 8 frames per second.
-            The proposed approach outperforms state-of-the-art methods for needle segmentation while achieving real-time integration.
-            This work is a step forward towards real-time needle guidance using machine learning-based algorithms in handheld ultrasound
-            systems.
-        </p>
-        </div>
-
-        <h2 class="title is-3">Method</h2>
-        <div class="content has-text-justified">
+            and bovine tissue. The model is trained on 1262 frames and evaluated on 209 frames.</p>
+        <!-- <div class="content has-text-justified">
           <img src="./static/images/main_workflow_vidseg.png" alt="Main workflow" style="width:100%">
           <figcaption>Main work flow of our paper. In Stage 1, we initialize a Scene Context Model with the aggregated diffusion features. In Stage 2, we use the context model to predict coarse masks for the remaining frames.
             In Stage 3, we use the refined coarse masks to modulate the attention layers of the diffusion process. 
           </figcaption>
-        </div>
+        </div> -->
 
 
         <h2 class="title is-3">Results</h2>
+        <p> This approach achieves an Intersection Over Union (IoU) of 0.75 and a dice coefficient of 0.851 on frames obtained from human tissue. The model is integrated
+            into the processing pipeline of a portable ultrasound system and achieves an overall processing speed of about 8 frames per second.
+            The proposed approach outperforms state-of-the-art methods for needle segmentation while achieving real-time integration.
+            This work is a step forward towards real-time needle guidance using machine learning-based algorithms in handheld ultrasound
+            systems.</p>
+
+        </div>    
         <!-- <div id="results-carousel" class="carousel results-carousel">
           <div class="item item-steve">
             <video poster="" id="fullbody" autoplay controls muted loop playsinline width="100%">
@@ -322,6 +332,19 @@
       </div>
       </div>
     </div> -->
+
+    <!-- Citation -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h5>Citation</h5>
+        <pre style="margin:0"><code>@article{mugume2022nseg,
+title={Needle Segmentation For Real-time Guidance of Minimally Invasive 
+Procedures Using Handheld 2D Ultrasound Systems.}, 
+authors={Paul O Mugume, Alvin B Kimbowa, Sylvia Imanirakiza,
+Cosmas Mwikirize, Ilker Hacihaliloglu, and Andrew Katumba},
+journal = {TechRxiv}, year={October 05, 2022}
+        }</code></pre>
+      </div></div>
 
     <footer class="footer">
       <div class="container">
