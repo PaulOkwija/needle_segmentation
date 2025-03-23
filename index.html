@@ -273,12 +273,12 @@
             modified to allow for easy integration into a handheld ultrasound system. Two datasets were used in this work, one consisting
             of B-mode ultrasound videos obtained from human tissue and the other consisting of videos and frames from chicken, porcine
             and bovine tissue. The model is trained on 1262 frames and evaluated on 209 frames.</p>
-        <!-- <div class="content has-text-justified">
-          <img src="./static/images/main_workflow_vidseg.png" alt="Main workflow" style="width:100%">
-          <figcaption>Main work flow of our paper. In Stage 1, we initialize a Scene Context Model with the aggregated diffusion features. In Stage 2, we use the context model to predict coarse masks for the remaining frames.
-            In Stage 3, we use the refined coarse masks to modulate the attention layers of the diffusion process. 
+        <div class="content has-text-justified">
+          <img src="./static/images/Clarius API.png" alt="Main workflow" style="width:100%">
+          <figcaption>Main work flow after integration with Clarius API.Using the API, we stream images from the probe, 
+            make and overlay the predictions on them before they are displayed on the GUI. 
           </figcaption>
-        </div> -->
+        </div>
 
 
         <h2 class="title is-3">Results</h2>
@@ -289,25 +289,23 @@
             systems.</p>
 
         </div>    
-        <!-- <div id="results-carousel" class="carousel results-carousel">
-          <div class="item item-steve">
-            <video poster="" id="fullbody" autoplay controls muted loop playsinline width="100%">
-              <source src="./static/videos/frankfurt_000000_000557_leftImg8bit.mp4"
-                      type="video/mp4">
-            </video>
+        <div class="content has-text-justified">
+            <img src="./static/images/pred_1.png" alt="Sample predictions" style="width:100%">
+            <!-- <figcaption>Sample predictions made 
+            </figcaption> -->
           </div>
-        </div>
 
 
         <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline width="100%">
-            <source src="./static/videos/frankfurt_000000_000557_leftImg8bit.mp4"
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline width="70%">
+            <source src="./static/videos/pc_1_3_1.mp4"
                     type="video/mp4">
-          </video>
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline width="100%">
-            <source src="./static/videos/frankfurt_000000_005524_leftImg8bit.mp4"
+          </video></div>
+          <!-- <video poster="" id="fullbody" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/ph_1_3_1.mp4"
                     type="video/mp4">
-          </video>
+          </video> -->
+          <!--
           <video poster="" id="fullbody" autoplay controls muted loop playsinline width="100%">
             <source src="./static/videos/frankfurt_000000_005879_leftImg8bit.mp4"
                     type="video/mp4">
