@@ -6,7 +6,7 @@ from torchvision.transforms import Compose
 import albumentations as A
 from albumentations.pytorch import ToTensorV2
 import torch.nn.functional as F
-from tqdm.notebook import tqdm
+from tqdm import tqdm
 import wandb
 
 
@@ -68,19 +68,17 @@ class BCEDiceLoss(torch.nn.Module):
 
 
 ## Model functions
-def train_fn(loader, model, optimizer, loss_fn, scaler, epoch,device):
-    loop = tqdm(loader)
+def train_fn(loader, model, optimizer, loss_fn, scaler, device):
+    loop = tqdm(loader, desc="Training", leave=True, dynamic_ncols=True)
 
     for batch_idx, (data, targets) in enumerate(loop):
         data = data.to(device=device)
         targets = targets.float().unsqueeze(1).to(device=device)
-        # print(targets.shape)
 
         # forward
-        with torch.cuda.amp.autocast():
+        with torch.amp.autocast('cuda'):
             predictions = model(data)
             loss = loss_fn(predictions, targets)
-            # wandb.log({"Epoch" : epoch + 1, "epoch loss": loss})
 
         # backward
         optimizer.zero_grad()

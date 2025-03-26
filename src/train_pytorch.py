@@ -6,7 +6,7 @@ from torchvision.transforms import Compose
 import albumentations as A
 from albumentations.pytorch import ToTensorV2
 import torch.nn.functional as F
-from tqdm.notebook import tqdm
+from tqdm import tqdm
 # import wandb
 from pytorch_utils import train_fn, check_accuracy, IOULoss, BCEDiceLoss, NeedleDataset
 # from model_definitions.UNeXt import Model
@@ -97,14 +97,14 @@ def main():
     # wandb.init(project="Modular_Needle_work_tests")
 
     # Training loop
-    scaler = torch.cuda.amp.GradScaler()
+    scaler = torch.amp.GradScaler('cuda')
     count_m = 0
     best_dice = 0
     best_iou = 0
     for epoch in range(epochs):
         print('-----------------------------------------------------------')
         print(f"Epoch: {epoch}")
-        loss = train_fn(train_loader, model, optimizer, loss_fn, scaler, epoch,device)
+        loss = train_fn(train_loader, model, optimizer, loss_fn, scaler,device)
         # save model
         checkpoint = {
             "state_dict": model.state_dict(),
