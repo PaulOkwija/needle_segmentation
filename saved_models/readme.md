@@ -1,1 +1,1 @@
-Save your models here
+Save your trained models (.pth or otherwise) here.
