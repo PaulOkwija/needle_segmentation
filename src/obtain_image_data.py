@@ -5,10 +5,18 @@ def get_data(args):
     source = args.data_path
     destination = '../data/raw/Images.zip'
 
-    print('Copying image files...')
-    shutil.copy(source, destination)
+    csv_files = [f for f in os.listdir(source) if f.endswith('.csv')]
+    if len(csv_files) == 0:
+        raise ValueError('No CSV files found in the source directory')
+    image_path = source + '/Images.zip'
 
-    with zipfile.ZipFile(source, 'r') as zip_ref:
+    print('Copying image files...')
+    shutil.copy(image_path, destination)
+
+    for csv in csv_files:
+        shutil.copy(source + '/' + csv, '../data/raw')
+
+    with zipfile.ZipFile(image_path, 'r') as zip_ref:
         zip_ref.extractall('../data/raw')
 
     os.remove(destination)
