@@ -1,1 +1,0 @@
-This is where the csv files containing information about the images goes
