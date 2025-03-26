@@ -1,9 +1,16 @@
 import argparse, shutil, zipfile, os
 
+def make_dir(path):
+    if not os.path.exists(path):
+        os.makedirs(path)
+    print('{} directory created'.format(path))
+
 
 def get_data(args):
     source = args.data_path
     destination = '../data/raw/Images.zip'
+
+    make_dir('../data/raw/data_4_code_line')
 
     csv_files = [f for f in os.listdir(source) if f.endswith('.csv')]
     if len(csv_files) == 0:
@@ -14,7 +21,8 @@ def get_data(args):
     shutil.copy(image_path, destination)
 
     for csv in csv_files:
-        shutil.copy(source + '/' + csv, '../data/raw')
+        shutil.copy(source + '/' + csv, '../data/raw/data_4_code_line')
+        print("{} copied".format(csv))
 
     with zipfile.ZipFile(image_path, 'r') as zip_ref:
         zip_ref.extractall('../data/raw')
